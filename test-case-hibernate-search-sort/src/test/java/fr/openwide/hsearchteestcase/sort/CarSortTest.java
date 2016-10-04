@@ -24,6 +24,7 @@ import com.google.common.collect.Lists;
 
 public class CarSortTest extends SearchTestBase {
 
+	@Override
 	public Class<?>[] getAnnotatedClasses() {
 		return new Class<?>[]{ Car.class };
 	}
@@ -62,6 +63,7 @@ public class CarSortTest extends SearchTestBase {
 		List<Car> result = (List<Car>) fullTextQuery.list();
 		System.out.println(result);
 		Object[] resultId = Lists.<Long>newArrayList(Iterables.transform(result, new Function<Car, Long>() {
+			@Override
 			public Long apply(Car input) {
 				return input != null ? input.getId() : null;
 			}
