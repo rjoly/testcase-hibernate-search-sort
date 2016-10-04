@@ -51,7 +51,6 @@ public class Car {
 	@Id
 	@DocumentId
 	@GeneratedValue
-//	@GeneratedValue(generator = GeneratorName.GENERATOR_NAME)
 	private Long id;
 
 	@Basic(optional = false)

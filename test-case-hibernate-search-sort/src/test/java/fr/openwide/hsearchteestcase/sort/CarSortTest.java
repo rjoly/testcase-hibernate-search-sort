@@ -29,10 +29,10 @@ public class CarSortTest extends SearchTestBase {
 	}
 	
 	@Test
-	@TestForIssue(jiraKey = "HSEARCH-NNNNN") // Please fill in the JIRA key of your issue
+	@TestForIssue(jiraKey = "HSEARCH-2376") // Please fill in the JIRA key of your issue
 	@SuppressWarnings("unchecked")
 	public void testCarSort() {
-		System.out.println("Toto");
+		System.out.println("Sort my cars - Test begin");
 		Session session = openSession();
 		
 		Car car1 = new Car("alfa romeo");
@@ -81,6 +81,7 @@ public class CarSortTest extends SearchTestBase {
 //		);
 		
 		session.close();
+		System.out.println("Sort my cars - Test end");
 	}
 
 }
