@@ -70,17 +70,17 @@ public class CarSortTest extends SearchTestBase {
 		})).toArray();
 		
 		// Current result
-		assertArrayEquals(
-				// [<3, AUDI>, <2, Mercedes>, <5, Range Rover>, <1, alfa romeo>, <6, Àtester>, <4, épilogue>]
-				Lists.newArrayList(3L, 2L, 5L, 1L, 6L, 4L).toArray(),
-				resultId
-		);
-//		// Result I should have with a case insensitive sort
 //		assertArrayEquals(
-//				// [<1, alfa romeo>, <6, Àtester>, <3, AUDI>, <4, épilogue>, <2, Mercedes>, <5, Range Rover>]
-//				Lists.newArrayList(1L, 6L, 3L, 4L, 2L, 5L).toArray(),
+//				// [<3, AUDI>, <2, Mercedes>, <5, Range Rover>, <1, alfa romeo>, <6, Àtester>, <4, épilogue>]
+//				Lists.newArrayList(3L, 2L, 5L, 1L, 6L, 4L).toArray(),
 //				resultId
 //		);
+		// Result I should have with a case insensitive sort
+		assertArrayEquals(
+				// [<1, alfa romeo>, <6, Àtester>, <3, AUDI>, <4, épilogue>, <2, Mercedes>, <5, Range Rover>]
+				Lists.newArrayList(1L, 6L, 3L, 4L, 2L, 5L).toArray(),
+				resultId
+		);
 		
 		session.close();
 		System.out.println("Sort my cars - Test end");
